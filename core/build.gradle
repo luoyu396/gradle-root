@@ -1,0 +1,19 @@
+apply plugin : 'maven-publish'
+publishing {
+    publications {
+        aaa(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = ""
+        }
+    }
+}
+
+dependencies {
+    //依赖model
+    compile project(":model")
+    testCompile "junit:junit:${junitVersion}"
+}

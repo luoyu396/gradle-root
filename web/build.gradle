@@ -1,0 +1,8 @@
+plugins {
+    id 'war'
+}
+
+dependencies {
+    //依赖core
+    compile project(":core")
+}
